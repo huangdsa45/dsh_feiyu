@@ -1,0 +1,10 @@
+# Node
+node_modules/
+
+# Python（tools/build_assets.py 的字节码缓存）
+__pycache__/
+*.py[cod]
+
+# OS
+.DS_Store
+Thumbs.db

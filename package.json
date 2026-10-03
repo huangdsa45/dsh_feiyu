@@ -1,0 +1,38 @@
+{
+  "name": "@local/dsh-pet",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Desktop fat-fish pet for DeepSeek Harness: a click-through floating overlay rendered inside the GUI. No host process, no model-facing surface, no network.",
+  "meta": {
+    "title": "桌面大肥鱼",
+    "description": "把大肥鱼挂在 GUI 右下角：动画、气泡、随机互动与玩法彩蛋。纯客户端浮层，不新增后台进程、不注册任何模型可见内容、不发起网络请求。"
+  },
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "cordis.patch.yml"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "license": "MIT",
+  "dsh": {
+    "client": {
+      "platform": "web"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

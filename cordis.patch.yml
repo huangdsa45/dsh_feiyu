@@ -1,0 +1,14 @@
+# Bundle patch for @local/dsh-pet.
+#
+# A patch layer, not a config file: it is applied on top of the profile's own
+# layers when this bundle is installed. The insert adds the host entry, whose
+# whole job is to publish this package's assets/ directory over the loopback
+# HTTP carrier the Web GUI is already loaded from.
+#
+# Deliberately pure ASCII: this ecosystem has a documented history of patch
+# files breaking under an unexpected code page.
+- insert:
+    - id: dsh-pet
+      name: '@local/dsh-pet'
+      config:
+        enabled: true
